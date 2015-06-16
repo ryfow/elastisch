@@ -25,8 +25,8 @@ a sort map instead of order. For example:
 
 (doc/search conn index type
             {:query (q/query-string :query "software" :default_field "summary")
-             :sort (q/sort "unmapped-field-name" {:ignore-unmapped true
-                                                  :order "asc"})})
+             :sort  (q/sort "unmapped-field-name" {:ignore-unmapped true
+                                                   :order "asc"})})
 ```
 
 Contributed by @ryfow
