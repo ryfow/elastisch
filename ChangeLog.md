@@ -18,15 +18,16 @@ Contributed by @nikopol.
 In both native and rest apis, `:ignore-unmapped` may be set in the query by specifying
 a sort map instead of order. For example:
 
-     ```clojure
-     (require '[clojurewerkz.elastisch.native.document :as doc])
-     (require '[clojurewerkz.elastisch.query :as q])
 
-     (doc/search conn index type
-                 {:query (q/query-string :query "software" :default_field "summary")
-                  :sort (q/sort "unmapped-field-name" {:ignore-unmapped true
-                                                       :order "asc"})})
-     ```
+``` clojure
+(require '[clojurewerkz.elastisch.native.document :as doc])
+(require '[clojurewerkz.elastisch.query :as q])
+
+(doc/search conn index type
+            {:query (q/query-string :query "software" :default_field "summary")
+             :sort (q/sort "unmapped-field-name" {:ignore-unmapped true
+                                                  :order "asc"})})
+```
 
 Contributed by @ryfow
 
