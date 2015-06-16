@@ -16,7 +16,8 @@ Contributed by @nikopol.
 ### allow setting `:ignore-unmapped` in query sort instructions
 
 In both native and rest apis, `:ignore-unmapped` may be set in the query by specifying
-a sort map instead of order. For example:
+a sort field-name and option-map instead of order name with the `query/sort` function.
+For example:
 
 
 ``` clojure
